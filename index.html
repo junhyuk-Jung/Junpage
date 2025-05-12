@@ -29,7 +29,7 @@
       font-weight: bold;
     }
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
       padding: 2rem;
     }
@@ -44,12 +44,13 @@
       color: #666;
     }
     img.profile {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
       margin: 1rem auto;
       display: block;
+      border: 2px solid #007acc;
     }
     button {
       background-color: #007acc;
@@ -67,7 +68,7 @@
 <body>
   <header>
     <h1>정준혁의 블로그</h1>
-    <img src="https://via.placeholder.com/120" alt="프로필 이미지" class="profile" />
+    <img src="junpicture.jpg" alt="프로필 이미지" class="profile" />
     <p>감각 통합, 뇌공학, 그리고 삶에 대한 이야기들</p>
   </header>
 
@@ -75,13 +76,17 @@
     <a href="#about">소개</a>
     <a href="#posts">블로그</a>
     <a href="#gallery">갤러리</a>
+    <a href="#projects">연구</a>
     <a href="#contact">연락처</a>
   </nav>
 
   <main>
     <section id="about">
       <h2>소개</h2>
-      <p>안녕하세요! 저는 감각 정보의 통합, 뇌신경 인터페이스, 그리고 사람의 인지를 탐구하는 연구를 하고 있는 정준혁입니다. 이 블로그에서는 연구 이야기부터 개인적인 생각까지 다양한 주제를 다룹니다.</p>
+      <p>안녕하세요! 저는 감각 정보의 통합, 뇌신경 인터페이스, 그리고 사람의 인지를 탐구하는 연구를 하고 있는 정준혁입니다.</p>
+      <p>현재 성균관대학교에서 통합 신경보철 연구실(INPL) 소속으로 박사통합과정을 밟고 있으며, 주요 관심분야는 다감각 통합, 인지 신경과학, 뇌파 분석, 인공 신경자극입니다.</p>
+      <p>이 블로그에서는 연구 이야기부터 실험실 장비 팁, 논문 리뷰, 그리고 연구자로서의 삶과 태도에 대해 진솔하게 공유하려 합니다.</p>
+      <p>학부 시절에는 글로벌비즈니스와 바이오융합을 융합적으로 공부했고, 다양한 프로젝트와 인턴 경험을 통해 실용적인 기술과 학문적 깊이를 함께 추구하고 있습니다.</p>
     </section>
 
     <section id="posts">
@@ -89,7 +94,10 @@
       <ul>
         <li><strong>[2025-05-10]</strong> 시청각 통합의 시간창이란 무엇인가?</li>
         <li><strong>[2025-04-30]</strong> 실험 장비 셋업 팁 정리</li>
+        <li><strong>[2025-04-25]</strong> CFF와 통합창의 관계에 대한 고찰</li>
         <li><strong>[2025-04-20]</strong> 논문 리뷰: Bayesian Causal Inference</li>
+        <li><strong>[2025-04-15]</strong> EEG 실험 세팅에서 주의해야 할 것들</li>
+        <li><strong>[2025-04-10]</strong> 시각 자극 타이밍 정확도 확보 방법</li>
       </ul>
     </section>
 
@@ -99,10 +107,23 @@
       <img src="https://via.placeholder.com/300x200" alt="갤러리 이미지2" />
     </section>
 
+    <section id="projects">
+      <h2>연구 활동</h2>
+      <p><strong>주제:</strong> Temporal causal inference in multisensory perception</p>
+      <p><strong>요약:</strong> 시각과 청각의 시간적 샘플링 속도가 다름에도 불구하고 어떻게 인간은 원인 추론 기반으로 이를 통합하는지를 규명하는 연구를 진행하고 있습니다. Bayesian 모델과 EEG 측정을 함께 활용합니다.</p>
+      <p><strong>관련 실험:</strong></p>
+      <ul>
+        <li>LED 기반 CFF 실험</li>
+        <li>SSVEP 기반의 flicker fusion 측정</li>
+        <li>PyQt 기반 시청각 통합 자극기 설계</li>
+        <li>Arduino + DFPlayer Mini 기반의 멀티스피커 실험</li>
+      </ul>
+    </section>
+
     <section id="contact">
       <h2>연락처</h2>
-      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">yourprofile</a></p>
+      <p>Email: <a href="mailto:wns050505@naver.com">wns050505@naver.com</a></p>
+      <p>GitHub: <a href="https://github.com/junhyuk-Jung" target="_blank">junhyuk-Jung</a></p>
       <p>Instagram: <a href="https://instagram.com/yourprofile" target="_blank">@yourprofile</a></p>
     </section>
 
