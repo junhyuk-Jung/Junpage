@@ -19,15 +19,22 @@
     a:hover{text-decoration:underline}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-    header{position:sticky;top:0;z-index:50;background:rgba(10,14,20,.75);backdrop-filter: blur(10px);border-bottom:1px solid var(--border)}
+    /* 헤더는 전체 너비 + 좌우 패딩 제거로 로고/메뉴를 화면 가장자리로 붙임 */
+    header .container{max-width:100%;padding-left:0;padding-right:0}
+    .header-inner{padding-left:0;padding-right:0}
+    /* 메뉴를 우측 끝으로 */
+    header .actions{margin-left:auto}
+    header nav ul{justify-content:flex-end}
+
+    header{position:static;top:auto;z-index:50;background:transparent;backdrop-filter:none;border-bottom:none}
     .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:14px}
     .brand h1{font-size:1rem;margin:0;font-weight:800;letter-spacing:.2px}
     .logo{height:40px;width:auto;object-fit:contain}
     .right-logo{height:40px}
     nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    nav a{padding:8px 12px;border-radius:999px;border:1px solid transparent}
-    nav a:hover{border-color:var(--border);background:#0f1621}
+    nav a{padding:8px 12px;border-radius:999px;border:1px solid transparent;color:#fff}
+    nav a:hover{border-color:transparent;background:rgba(255,255,255,.08);color:#fff}
     .menu-toggle{display:none}
     @media (max-width: 860px){
       nav{display:none}
@@ -103,8 +110,8 @@
     <div class="container header-inner">
       <div class="brand">
         <!-- 좌측: 성균관대 로고 + INPL 로고 -->
-        <img src="sungkyunkwan.png" alt="성균관대학교 로고" class="logo" id="skku-logo">
-        <img src="inpllogo.png" alt="INPL 로고" class="logo" id="inpl-logo">
+        <img src="assets/skku-logo.png" alt="성균관대학교 로고" class="logo" id="skku-logo">
+        <img src="assets/inpl-logo.png" alt="INPL 로고" class="logo" id="inpl-logo">
       </div>
       <div class="actions" style="display:flex; align-items:center; gap:12px;">
         <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" onclick="toggleMenu()">메뉴</button>
