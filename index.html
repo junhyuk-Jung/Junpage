@@ -37,7 +37,9 @@
       .brand h1{display:none}
     }
 
-    .hero{position:relative;padding:72px 0 40px}
+    .hero{position:relative;padding:120px 0 80px;min-height:65vh;background:url('background.png') center/cover no-repeat} 
+    .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(4,8,12,.65));}
+    .hero > *{position:relative;z-index:1}
     .hero .title{font-size:2.1rem;line-height:1.2;margin:0 0 18px;font-weight:900}
     .hero .subtitle{color:var(--muted);max-width:900px}
     .cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
@@ -100,25 +102,23 @@
   <header>
     <div class="container header-inner">
       <div class="brand">
-        <!-- TODO: 실제 성균관대 로고 이미지로 교체 -->
+        <!-- 좌측: 성균관대 로고 + INPL 로고 -->
         <img src="assets/skku-logo.png" alt="성균관대학교 로고" class="logo" id="skku-logo">
-        <h1>INPL · Integrated Neuro‑prosthesis Laboratory</h1>
+        <img src="assets/inpl-logo.png" alt="INPL 로고" class="logo" id="inpl-logo">
       </div>
       <div class="actions" style="display:flex; align-items:center; gap:12px;">
         <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" onclick="toggleMenu()">메뉴</button>
-        <!-- TODO: 실제 INPL 로고 이미지로 교체 -->
-        <img src="assets/inpl-logo.png" alt="INPL 로고" class="right-logo" id="inpl-logo">
+        <nav id="site-nav" aria-label="주요 메뉴">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#people">people</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#research">Current Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
-    <nav id="site-nav" aria-label="주요 메뉴" class="container">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#news">INPL News</a></li>
-        <li><a href="#research">Current Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main id="main">
